@@ -1,11 +1,12 @@
-choice=int(input("Enter 1 for AND, 2 for OR, 3 for NOT: "))
+choice=input("Enter a Traffic Light Color (Red/Yellow/Green/orange): ").strip().lower()
 
 match choice:
-    case 1:
-        print("AND")
-    case 2:
-        print("OR")
-    case 3:
-        print("NOT")
+    case "red":
+        print("STOP")
+    case "yellow" | "orange":
+        print("PREPARE TO STOP")
+    case "green":
+        print("GO")
     case _:
         print("INVALID CHOICE")
+     
